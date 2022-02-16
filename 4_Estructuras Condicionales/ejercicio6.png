@@ -1,0 +1,26 @@
+// Estructura Condicionales
+// Ejercicio 6
+Proceso Fruteria
+	Definir preciokilos,kilos,precio Como Real;
+	Definir descuento,precioFinal Como Real;
+	Escribir 'Precio del kilo de manzanas? ';
+	Leer preciokilos;
+	Escribir 'kilos de manzanas comprado? ';
+	Leer kilos;
+	precio <- preciokilos*kilos;
+	Si kilos>=0 Y kilos<=2 Entonces
+		descuento <- 0;
+	SiNo
+		Si kilos>=2.01 Y kilos<=5 Entonces
+			descuento <- precio*10/100;
+		SiNo
+			Si kilos>=5.01 Y kilos<=10 Entonces
+				descuento <- precio*15/100;
+			SiNo
+				descuento <- precio*20/100;
+			FinSi
+		FinSi
+	FinSi
+	precioFinal <- precio-descuento;
+	Escribir 'El precio total es: $',precioFinal;
+FinProceso
